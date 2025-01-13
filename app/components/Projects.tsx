@@ -58,7 +58,7 @@ export default function Projects() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl sm:text-6xl font-bold mb-16 tracking-tight">
+        <h2 className="text-5xl sm:text-6xl font-bold mb-16 tracking-tight [text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)] dark:[text-shadow:_none]">
           Projects
         </h2>
         <div className="space-y-20">

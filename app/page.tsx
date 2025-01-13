@@ -16,7 +16,25 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState(0);
   const sections = useRef<HTMLElement[]>([]);
 
+  const sectionNames = [
+    'hero',
+    'about',
+    'experience',
+    'projects',
+    'skills',
+    'education',
+    'contact',
+  ];
+
   useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    const initialSectionIndex = sectionNames.indexOf(hash);
+    if (initialSectionIndex !== -1) {
+      setTimeout(() => {
+        scrollToSection(initialSectionIndex);
+      }, 100);
+    }
+
     if (!containerRef.current) return;
 
     const sectionElements = containerRef.current.querySelectorAll('section');
@@ -28,11 +46,13 @@ export default function Home() {
           if (entry.isIntersecting) {
             const index = sections.current.indexOf(entry.target as HTMLElement);
             setCurrentSection(index);
+            window.history.replaceState(null, '', `#${sectionNames[index]}`);
           }
         });
       },
       {
-        threshold: 0.5,
+        threshold: 0.2,
+        rootMargin: '0px',
       }
     );
 
@@ -45,6 +65,7 @@ export default function Home() {
       behavior: 'smooth',
       block: 'start',
     });
+    window.history.replaceState(null, '', `#${sectionNames[index]}`);
   };
 
   return (
@@ -61,19 +82,19 @@ export default function Home() {
         <section className="snap-start h-screen">
           <About />
         </section>
-        <section className="snap-start">
+        <section className="snap-start min-h-screen">
           <Experience />
         </section>
-        <section className="snap-start">
+        <section className="snap-start min-h-screen">
           <Projects />
         </section>
-        <section className="snap-start h-screen">
+        <section className="snap-start min-h-screen">
           <Skills />
         </section>
-        <section className="snap-start h-screen">
+        <section className="snap-start min-h-screen">
           <Education />
         </section>
-        <section className="snap-start h-screen">
+        <section className="snap-start min-h-screen">
           <Contact />
         </section>
       </div>

@@ -12,14 +12,14 @@ export default function Contact() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl sm:text-6xl font-bold mb-16 tracking-tight">
+        <h2 className="text-5xl sm:text-6xl font-bold mb-16 tracking-tight [text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)] dark:[text-shadow:_none]">
           Contact
         </h2>
         <div className="space-y-8 text-xl">
           <p>
             <a
               href="mailto:tyagivishal227@gmail.com"
-              className="hover:text-[var(--muted)] transition-colors"
+              className="hover:text-[var(--highlight)] transition-colors"
             >
               tyagivishal227@gmail.com
             </a>
@@ -27,7 +27,7 @@ export default function Contact() {
           <p>
             <a
               href="tel:+918171849365"
-              className="hover:text-[var(--muted)] transition-colors"
+              className="hover:text-[var(--highlight)] transition-colors"
             >
               +91 8171849365
             </a>
@@ -37,15 +37,15 @@ export default function Contact() {
               href="https://linkedin.com/in/vishaltyagi227"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--muted)] transition-colors"
+              className="hover:text-[var(--highlight)] transition-colors"
             >
               LinkedIn
             </a>
             <a
-              href="https://github.com/vishaltyagi227"
+              href="https://github.com/vishal-tyagi-github"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--muted)] transition-colors"
+              className="hover:text-[var(--highlight)] transition-colors"
             >
               GitHub
             </a>
