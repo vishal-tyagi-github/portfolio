@@ -1,42 +1,49 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Timeline } from '@/components/ui/timeline';
+import { motion } from "framer-motion";
+import { Timeline } from "@/components/ui/timeline";
 
 const experiences = [
   {
-    title: 'Software Engineer - I',
-    company: 'upGrad Education Pvt. Ltd.',
-    period: 'Aug 2024 – Present',
+    title: "Software Engineer - 2",
+    company: "upGrad Education Pvt. Ltd.",
+    period: "Aug 2024 – Present",
+    projects: "Order Management System",
     responsibilities: [
-      'Spearheaded development of high-priority features in the Order Management System',
-      'Managed medium to high-complexity features from planning to deployment',
-      'Guided and mentored new team members on project workflows and best practices',
-      'Conducted detailed code reviews and provided constructive feedback',
+      "Built JSON-driven, configurable UIs for multi-tenant React apps",
+      "Customised payment flows with tenant-specific gateways and options",
+      "Developed a flexible order management system at upGrad",
+      "Guided and mentored new team members on project workflows, best practices, and feature development, fostering skill growth and productivity within the team",
+      "Conducted detailed code reviews and provided constructive feedback on pull requests, maintaining high-quality code standards and ensuring project consistency",
     ],
   },
   {
-    title: 'Senior Frontend Developer',
-    company: 'Josh Technology Group',
-    period: 'Oct 2023 – Aug 2024',
+    title: "Senior Frontend Developer",
+    company: "Josh Technology Group",
+    period: "Oct 2023 – Aug 2024",
+    projects: "GroupNexus, Pod.ai",
     responsibilities: [
-      'Led cross-functional teams in requirement gathering and feature release planning',
-      'Actively engaged in code reviews and system design',
-      'Led a team of 5 in a major React router dependencies migration',
-      'Migrated a WordPress application to Next.js and Tailwind CSS',
-      'Enhanced Firestore security rules, resulting in a 70% decrease in vulnerabilities',
-      'Optimized application performance, reducing loading time by 26%',
+      "Led cross-functional teams in requirement gathering, UI design collaboration, feature release planning, and alignment with Agile sprints for timely delivery",
+      "Actively engaged in code reviews and system design. Collaborated on design discussions, assisted peers with technical queries, facilitated task completion, and demonstrated leadership and teamwork when necessary",
+      "Led a team of 5 in a major React router dependencies migration, minimizing code changes, introducing nested routes, and ensuring smooth feature releases. Coordinated with QA and technical leads to mitigate product impact and reduce bugs, overseeing code reviews and extensive testing",
+      "Enhanced Firestore security rules to uphold app security and ensure data integrity, resulting in a 70% decrease in vulnerabilities and data breaches. Ensured compliance with GDPR, contributing to a 2% annual revenue saving for the organisation",
+      "Migrated a WordPress application to Next.js and Tailwind CSS, enhancing support and achieving high SEO rankings",
+      "Optimized application to meet Core Web Vitals standards, reducing loading time by 26% through page load and image optimization techniques",
+      "Mentored 2 new joiners through the induction process, providing code reviews, guidance, and support. Clarified doubts, aligned their learning paths, and helped them with project onboarding",
+      "Contributed to the frontend recruitment drive by preparing 50+ interview questions and reviewing interview materials. Conducted 7 interviews, evaluating candidates' skills and suitability for the role",
     ],
   },
   {
-    title: 'Frontend Developer',
-    company: 'Josh Technology Group',
-    period: 'Jun 2022 – Sept 2023',
+    title: "Frontend Developer",
+    company: "Josh Technology Group",
+    period: "Jun 2022 – Sept 2023",
+    projects: "GroupNexus",
     responsibilities: [
-      'Executed daily tasks involving requirement gathering and UI design collaboration',
-      'Enhanced test coverage by 30% through comprehensive unit testing',
-      'Reduced build size by 8% through Firebase SDK upgrade',
-      'Boosted build efficiency by 37% with Webpack upgrade',
+      "Executed daily tasks involving requirement gathering, collaborating on UI designs, addressing bug fixes, and developing new flows/features",
+      "Enhanced test coverage by 30% through comprehensive unit testing using Jest and React Testing Library, achieving over 80% coverage",
+      "Reduced build size by 8% through Firebase SDK upgrade from v8 to v9, leveraging tree-shaking capabilities",
+      "Boosted build efficiency by 37% with Webpack upgrade from v4 to v5, reducing build time from 8 min to 5 min",
+      "Refactored code, reducing technical debt by 24% and improving code maintainability",
     ],
   },
 ];
@@ -54,9 +61,13 @@ export default function Experience() {
           viewport={{ once: true }}
           className="border-t border-[var(--muted)] pt-8"
         >
-          {/* <h3 className="text-2xl font-semibold mb-2">{exp.title}</h3> */}
           <p className="text-xl mb-2 text-[var(--highlight)]">{exp.company}</p>
-          <p className="text-[var(--muted)] mb-6">{exp.period}</p>
+          <p className="text-[var(--muted)] mb-2">{exp.period}</p>
+          {exp.projects && (
+            <p className="text-sm text-[var(--muted)] mb-4 italic">
+              Projects: {exp.projects}
+            </p>
+          )}
           <ul className="list-disc list-inside mb-6 space-y-2 text-[var(--muted)]">
             {exp.responsibilities.map((resp, i) => (
               <li key={i} className="pl-2">
