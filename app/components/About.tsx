@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 function getExperienceDuration() {
-  const startDate = new Date('2022-06-15');
+  const startDate = new Date("2022-06-15");
   const currentDate = new Date();
   const diffTime = Math.abs(currentDate.getTime() - startDate.getTime());
   const diffMonths = Math.ceil(diffTime / (1000 * 60 * 60 * 24 * 30));
@@ -25,12 +25,12 @@ export default function About() {
           About
         </h2>
         <p className="text-xl text-[var(--muted)] mb-6 leading-relaxed">
-          Experienced frontend developer with{' '}
+          Experienced frontend developer with{" "}
           <span className="font-bold">{getExperienceDuration()}</span> in
-          <span className="font-bold">{' React.js '}</span>,{' '}
-          <span className="font-bold">{' Next.js '}</span>,{' '}
-          <span className="font-bold">{' JavaScript '}</span>, and
-          <span className="font-bold">{' TypeScript '}</span>. Expert in
+          <span className="font-bold">{" React.js "}</span>,{" "}
+          <span className="font-bold">{" Next.js "}</span>,{" "}
+          <span className="font-bold">{" JavaScript "}</span>, and
+          <span className="font-bold">{" TypeScript "}</span>. Expert in
           building user-friendly web apps, leading teams, optimizing
           performance, and enhancing security.
           {/* An <span className="">experienced frontend developer</span> with

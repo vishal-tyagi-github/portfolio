@@ -10,11 +10,11 @@ const experiences = [
     period: "Aug 2024 – Present",
     projects: "Order Management System",
     responsibilities: [
-      "Built JSON-driven, configurable UIs for multi-tenant React apps",
-      "Customised payment flows with tenant-specific gateways and options",
-      "Developed a flexible order management system at upGrad",
-      "Guided and mentored new team members on project workflows, best practices, and feature development, fostering skill growth and productivity within the team",
-      "Conducted detailed code reviews and provided constructive feedback on pull requests, maintaining high-quality code standards and ensuring project consistency",
+      "Accomplished seamless integration of business operations by implementing a multi-tenant, JSON-driven UI in React for the “one-OMS” Order Management System, which led to unified process management for both upGrad and Knowledge Hut businesses.",
+      "Accomplished efficient document processing by developing a Document Management System for student applications, which led to streamlined verification, prompt error correction by students, and smoother admissions progression.",
+      "Accomplished a 40% reduction in payment drop-offs by implementing Razorpay for domestic, and Stripe/Adyen for international payments, alongside designing a user-friendly payment page which led to increased payment completions.",
+      "Implemented a mobile-first payment by incorporating QR code and UPI app payment flows directly within the upGrad website, which led to a faster and more convenient checkout experience.",
+      "Accomplished improved user experience and conversion rate by tracking and analyzing user behavior to identify and address potential drop-off points, which led to a more intuitive application process.",
     ],
   },
   {

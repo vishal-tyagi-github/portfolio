@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Download } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { BackgroundLines } from '@/components/ui/background-lines';
-import { TypewriterEffectSmooth } from './ui/typewriter-effect';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import { useEffect, useState } from "react";
 
 function TypingEffect({ text }: { readonly text: string }) {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,13 +24,13 @@ function TypingEffect({ text }: { readonly text: string }) {
   return <span>{displayedText}</span>;
 }
 export default function Hero() {
-  const text = 'Frontend Developer crafting exceptional digital experiences';
-  const words = text.split(' ').map((word, index) => ({
+  const text = "Frontend Developer crafting exceptional digital experiences";
+  const words = text.split(" ").map((word, index) => ({
     text: word,
     className: `text-xl sm:text-2xl text-[var(--muted)] dark:text-[var(--muted)] tracking-wide ${
       index === 0 || index === 1
-        ? 'text-[var(--highlight)] dark:text-[var(--highlight)]'
-        : ''
+        ? "text-[var(--highlight)] dark:text-[var(--highlight)]"
+        : ""
     }`,
   }));
 
@@ -68,7 +68,7 @@ export default function Hero() {
               asChild
               className="bg-[var(--foreground)] text-[var(--background)] hover:scale-105 hover:shadow-lg hover:shadow-[var(--foreground)] hover:rotate-1 transition-all duration-300 ease-out relative before:absolute before:inset-0 before:bg-[var(--foreground)] before:opacity-50 before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-transform before:duration-300 before:-z-10"
             >
-              <a href="/vishal-tyagi-resume.pdf" download>
+              <a href="/VishalTyagiResume.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download Resume
               </a>
